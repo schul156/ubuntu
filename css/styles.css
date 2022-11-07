@@ -1,0 +1,332 @@
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  background-image: linear-gradient(to right, #5e2750, #e95420, #5e2750);
+  background-size: 200%;
+  transition: all 1s ease-in;
+}
+
+.bg0 {
+  background-position: 0% 0%;
+}
+
+.bg1 {
+  background-position: 40% 40%;
+}
+
+.bg2 {
+  background-position: 80% 80%;
+}
+
+.bg3 {
+  background-position: 120% 120%;
+}
+
+.bg4 {
+  background-position: 160% 160%;
+}
+
+.bg5 {
+  background-position: 200% 200%;
+}
+
+hr {
+  color: white;
+}
+
+h1 {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 72px;
+}
+
+h5 {
+  font-weight: 300;
+  font-size: 32px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+img:hover {
+  opacity: 0.5;
+}
+
+.anchor {
+  position: absolute;
+}
+
+.main {
+  overscroll-behavior: none;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 160px repeat(7, 1660px);
+  grid-template-rows: 890px;
+  gap: 20px;
+}
+
+.section {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 5fr;
+  animation: fadein 5s ease 1;
+  background-color: rgba(38, 38, 38, 0.5);
+  border-radius: 25px;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.section > h1 {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+
+.section:last-child {
+  margin-right: 1%;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  height: 890px;
+  width: 160px;
+  display: inline-flex;
+  flex-direction: column;
+  flex-basis: 4%;
+  gap: 75px;
+  border-radius: 25px;
+  background-color: rgba(38, 38, 38, 0.5);
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  margin: 0px 0px 75px;
+}
+
+.navbar ul li a {
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar ul li a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar ul li .active {
+  color: rgba(255, 255, 255, 1);
+}
+
+.header > h1 {
+  font-style: normal;
+  font-size: 400%;
+  font-weight: 700;
+}
+
+.bcbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.bcbox > p:first-child {
+  grid-area: 1 / auto / span 2 / auto;
+  line-height: 2;
+}
+
+.bcbox > p:nth-child(3) {
+  line-height: 2;
+}
+
+.bcbox > p {
+  font-size: 18px;
+  grid-row-end: span 1;
+  line-height: 1.25;
+}
+
+.charbox {
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.chargrid {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 200px;
+}
+
+.charset {
+  display: inline-grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.charset > h5 {
+  grid-column-start: 1;
+  grid-column-end: span 10;
+}
+
+.char {
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+  padding: 2px;
+  border: 1px solid white;
+}
+
+.char:hover {
+  border: none;
+  padding: 3px;
+}
+
+.displaybox {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 100px;
+}
+
+.display {
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+
+.about div p {
+  text-align: left;
+}
+
+.about p a {
+  text-decoration-line: underline;
+}
+
+.about p a:hover {
+  opacity: 0.5;
+}
+
+.wordgrid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+
+.wordgrid > div {
+  grid-area: auto / auto / span 2 / span 1;
+}
+
+.wordgrid > div:nth-child(4) {
+  grid-area: 1 / 4 / span 1 / span 1;
+  display:inline-block;
+  text-align:right;
+  letter-spacing:44px;
+}
+
+.wordgrid > div:last-child {
+  grid-area: 2 / 4 / span 1 / span 1;
+  align-self: center;
+  display:inline-block;
+  text-align:right;
+  color:#AEA79F;
+}
+
+.stackbox {
+  grid-row-end: span 2fr;
+  display: grid;
+  position: relative;
+  align-items: center;
+}
+
+.stackbox p {
+  position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  font-size: 72px;
+}
+
+.expbox {
+  width: 800px;
+}
+
+.letter2, .letter3, .letter4 {
+  display: inline-block;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.reg {
+  font-weight: 400;
+}
+
+.med {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.condensed {
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+.mono {
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.left {
+  display: block;
+  text-align: left;
+}
+
+.right {
+  display: block;
+  text-align: right;
+}
+
+.arrow {
+  align-self: center;
+}
